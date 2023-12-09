@@ -9,9 +9,6 @@ namespace Program
 {
     class MainProgram
     {
-
-
-
         static bool ValidVector(string? inputVector)
         {
             return !(inputVector is null || inputVector == "");
@@ -20,7 +17,7 @@ namespace Program
 
         static string InputVector(string message)
         {
-            string inputVector;
+            string? inputVector;
             Console.Write(message);
             bool isCorrect = false;
 
@@ -132,7 +129,7 @@ namespace Program
 
             for (int i = 0; i < length / 2; i++)
             {
-                if (function[i] != function[length - 1 - i])
+                if (function[i] == function[length - 1 - i])
                 {
                     isSelfDual = false;
                     break;
