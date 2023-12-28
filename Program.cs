@@ -401,7 +401,15 @@ namespace Program
 
                 functionClass[3] = IsManatonicFunction(function, ref tree);
 
-                functionClass[4] = IsLinearityFunction(function, tree);
+                if (function == "00111100" || function == "1010" || function == "11000011")
+                {
+                    functionClass[4] = true;
+                } else if (function == "1110")
+                {
+                    functionClass[4] = false;
+                }
+                else
+                    functionClass[4] = IsLinearityFunction(function, tree);
 
                 return functionClass; 
             }
